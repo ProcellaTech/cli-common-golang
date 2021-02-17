@@ -27,7 +27,7 @@ import (
 	"github.com/mattn/go-colorable"
 	"github.com/mattn/go-isatty"
 	"github.com/mitchellh/go-homedir"
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli"
 )
 
 var (
