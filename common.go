@@ -63,19 +63,19 @@ func CreateApp(command_name, usage, description, version string, defaultSection 
 		dir, _ := homedir.Dir()
 		dir += string(os.PathSeparator) + ".edgerc"
 		App.Flags = []cli.Flag{
-			cli.StringFlag{
+			&cli.StringFlag{
 				Name:   "edgerc",
 				Usage:  "Location of the credentials file",
 				Value:  dir,
 				EnvVar: "AKAMAI_EDGERC",
 			},
-			cli.StringFlag{
+			&cli.StringFlag{
 				Name:   "section",
 				Usage:  "Section of the credentials file",
 				Value:  defaultSection,
 				EnvVar: "AKAMAI_EDGERC_SECTION",
 			},
-			cli.StringFlag{
+			&cli.StringFlag{
 				Name:   "accountkey",
 				Usage:  "Account switch key",
 				EnvVar: "AKAMAI_EDGERC_ACCOUNT_KEY",
